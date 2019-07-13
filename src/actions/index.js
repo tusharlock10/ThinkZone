@@ -5,6 +5,7 @@ import {
     OPEN_MODULE
 } from './types'
 
+
 export const EmailChangeAction = (email) => {
     return {
         type:EMAIL_CHANGE,

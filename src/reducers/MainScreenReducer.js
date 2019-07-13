@@ -7,7 +7,10 @@ const INITIAL_STATE= {
 export default (state = INITIAL_STATE, action) => {
     switch(action.type){
         case OPEN_MODULE:
-            Actions.ModuleScreen();
+            if (action.payload!=='Home'){
+                Actions.ModuleScreen();
+            }
+            
             return {text: action.payload}
 
         default:
