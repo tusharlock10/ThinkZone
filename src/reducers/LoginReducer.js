@@ -2,7 +2,9 @@ import {
     EMAIL_CHANGE,
     PASSWORD_CHANGE,
     LOGIN_BUTTON_PRESSED
-} from '../actions/types'
+} from '../actions/types';
+import {Actions} from 'react-native-router-flux'
+
 import data from '../auth.json'
 
 
@@ -14,16 +16,15 @@ INITIAL_STATE = {
 
 export default (state=INITIAL_STATE, action) => {
 
+
     switch (action.type){
         case EMAIL_CHANGE:
-            console.log(action.payload)
             return {
                 ...state,
                 email:action.payload
             }
 
         case PASSWORD_CHANGE:
-                console.log(action.payload)
                 return {
                     ...state,
                     password:action.payload
@@ -38,6 +39,7 @@ export default (state=INITIAL_STATE, action) => {
                 loggedin = 'Incorrect Password'
                 if (state.password === data.password){
                     loggedin='passed'
+                    Actions.main()
                 }
             }
 

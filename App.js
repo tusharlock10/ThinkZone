@@ -15,7 +15,7 @@ class App extends Component{
 
     return (
       <Provider store={store}>
-        <LoginForm/>
+        <Router/>
       </Provider>
     )
   }

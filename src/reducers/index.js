@@ -1,6 +1,11 @@
-import {combineReducers} from 'redux'
-import LoginReducer from './LoginReducer'
+import {combineReducers} from 'redux';
+import LoginReducer from './LoginReducer';
+import MainScreenReducer from './MainScreenReducer'
+
+
 
 export default combineReducers({
-    login: LoginReducer
+    login: LoginReducer,
+    mainScreen: MainScreenReducer
+    
 })

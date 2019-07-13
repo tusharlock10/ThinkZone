@@ -22,7 +22,8 @@ class LoginForm extends Component{
     async componentDidMount(){
         await Font.loadAsync({
             'Gotham-Black':require('../../assets/fonts/Gotham-Black.ttf'),
-            'manrope-medium':require('../../assets/fonts/manrope-medium.ttf')
+            'manrope-medium':require('../../assets/fonts/manrope-medium.ttf'),
+            'Product Sans Bold':require('../../assets/fonts/Product-Sans-Bold.ttf')
         })
 
         this.setState({fontLoaded:true})
@@ -32,12 +33,7 @@ class LoginForm extends Component{
         var jsx = <Text></Text>
 
         if (this.props.loggedin){
-            if (this.props.loggedin==='passed'){
-                jsx = <Text style={[styles.MessageTextStyling, {color:'rgb(100,170,100)'}]}>
-                    Successfuly Logged In
-                </Text>
-            }
-            else{
+            if (this.props.loggedin!=='passed'){
                 jsx = <Text style={[styles.MessageTextStyling, {color:'rgb(240,100,100)'}]}>
                     {this.props.loggedin}
                 </Text>
@@ -82,7 +78,6 @@ class LoginForm extends Component{
         )
     }
     render(){
-        console.log(this.props.loggedin)
         return(
             <ImageBackground style={{flex:1}} source={require('../../assets/images/login_back.png')}>
                 <StatusBar hidden={true}/>
