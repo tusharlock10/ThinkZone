@@ -4,6 +4,9 @@
     "slug": "ThinkZone",
     "privacy": "public",
     "sdkVersion": "33.0.0",
+    "android": {
+      "package": "com.tjproductions.thinkzone"
+    },
     "platforms": [
       "ios",
       "android",
